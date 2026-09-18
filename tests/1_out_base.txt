@@ -1,34 +1,34 @@
-contactBook.Contact book empty.
+Contact book empty.
 
-contactBook.Contact added.
+Contact added.
 
-contactBook.Contact already exists.
+Contact already exists.
 
-contactBook.Contact added.
+Contact added.
 
-contactBook.Contact removed.
+Contact removed.
 
-contactBook.Contact does not exist.
+Contact does not exist.
 
-contactBook.Contact added.
+Contact added.
 
 99999999
 
-contactBook.Contact does not exist.
+Contact does not exist.
 
 Joana@fct.unl.pt
 
-contactBook.Contact does not exist.
+Contact does not exist.
 
-contactBook.Contact updated.
+Contact updated.
 
-contactBook.Contact does not exist.
+Contact does not exist.
 
 253253253
 
-contactBook.Contact updated.
+Contact updated.
 
-contactBook.Contact does not exist.
+Contact does not exist.
 
 JoanaEu@tu.ele.pt
 
