@@ -1,5 +1,8 @@
 package contactBook;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class ContactBook {
     static final int DEFAULT_SIZE = 100;
 
@@ -99,5 +102,17 @@ public class ContactBook {
             }
         }
         return null;
+    }
+
+    public boolean hasDuplicates() {
+        Set<Integer> numbers = new HashSet<>();
+
+        for (int i = 0; i < counter; i++) {
+            int n = contacts[i].getPhone();
+            if (numbers.contains(n)) return true;
+            else numbers.add(n);
+        }
+
+        return false;
     }
 }

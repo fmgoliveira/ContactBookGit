@@ -17,6 +17,7 @@ public class Main {
 
     //added
     private static final String GET_CONTACT = "GN";
+    private static final String CHECK_DUPS = "EP";
 
     //Constantes que definem as mensagens para o utilizador
     public static final String CONTACT_EXISTS = "Contact already exists.";
@@ -30,6 +31,8 @@ public class Main {
 
     //added
     private static final String PHONE_NOT_EXISTS = "Phone number does not exist.";
+    private static final String HAS_DUPLICATES = "There are contacts that share phone numbers.";
+    private static final String NO_DUPLICATES = "All contacts have different phone numbers.";
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -61,7 +64,10 @@ public class Main {
                     break;
                 case GET_CONTACT:
                     getContact(in, cBook);
-                break;
+                    break;
+                case CHECK_DUPS:
+                    checkDuplicates(cBook);
+                    break;
                 default:
                     System.out.println(COMMAND_ERROR);
             }
@@ -164,5 +170,10 @@ public class Main {
         phone = in.nextInt(); in.nextLine();
         contact = cBook.getContact(phone);
         System.out.println(contact == null ? PHONE_NOT_EXISTS : contact);
+    }
+
+    private static void checkDuplicates(ContactBook cBook) {
+        boolean hasDups = cBook.hasDuplicates();
+        System.out.println(hasDups ? HAS_DUPLICATES : NO_DUPLICATES);
     }
 }
